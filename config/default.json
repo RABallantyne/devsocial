@@ -1,6 +1,1 @@
-{
-  "mongoURI": "mongodb+srv://RABallantyne:RABallantyne@devsocial-bhiss.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mySecretToken",
-  "githubClientId": "66a677e32c2a5b1fdac9",
-  "githubSecret": "85d94d5362746784269eeb2e4c451be9adc1a0dd"
-}
+{}
