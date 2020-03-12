@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { getCurrentProfile } from "../../actions/profile";
-import PrivateRoute from "../routing/PrivateRoute";
-import Spinner from "../layout/Spinner";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getCurrentProfile } from '../../actions/profile';
+import PrivateRoute from '../routing/PrivateRoute';
+import Spinner from '../layout/Spinner';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -19,17 +19,17 @@ const Dashboard = ({
     <Spinner />
   ) : (
     <>
-      <h1 className="large text-primary">Dashboard</h1>
-      <p className="lead">
-        <i className="fas fa-user"></i>Welcome {user && user.name}
+      <h1 className='large text-primary'>Dashboard</h1>
+      <p className='lead'>
+        <i className='fas fa-user'></i>Welcome {user && user.name}
       </p>
       {profile !== null ? (
-        <>has</>
+        <>need to create a profile display here.</>
       ) : (
         <>
           <p>
-            You need to set up your profile!{" "}
-            <Link to="/create-profile" className="btn btn-primary my-1">
+            You need to set up your profile!{' '}
+            <Link to='/create-profile' className='btn btn-primary my-1'>
               Create Profile
             </Link>
           </p>
