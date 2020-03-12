@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
 import PrivateRoute from '../routing/PrivateRoute';
+import DashboardActions from './DashboardActions';
 import Spinner from '../layout/Spinner';
 
 const Dashboard = ({
@@ -24,7 +25,7 @@ const Dashboard = ({
         <i className='fas fa-user'></i>Welcome {user && user.name}
       </p>
       {profile !== null ? (
-        <>need to create a profile display here.</>
+        <DashboardActions />
       ) : (
         <>
           <p>
