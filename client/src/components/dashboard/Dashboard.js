@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { getCurrentProfile } from '../../actions/profile';
 import PrivateRoute from '../routing/PrivateRoute';
 import DashboardActions from './DashboardActions';
+import Experience from './Experience';
 import Spinner from '../layout/Spinner';
 
 const Dashboard = ({
@@ -25,7 +26,10 @@ const Dashboard = ({
         <i className='fas fa-user'></i>Welcome {user && user.name}
       </p>
       {profile !== null ? (
-        <DashboardActions />
+        <>
+          <DashboardActions />
+          <Experience experience={profile.experience} />
+        </>
       ) : (
         <>
           <p>
